@@ -1,0 +1,48 @@
+body{
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f3f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    color: #4e4d4d;
+}
+.paragraph {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.text {
+    text-align: justify;
+    align-self: center;
+    width: 400px;
+  }
+  .image{
+    max-width: 400px;
+  }
+  
+  .image img {
+    width: 100%;
+  }
+  
+.btn-more{
+    background-color: #080405;
+    border: 3px solid #F1A8BB;
+    color: pink;
+    border-radius: 1px;
+    padding: 8px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    transition-duration: 0.4s;
+  }
+  .btn-more:hover{
+    background-color: white;
+    color: #F1A8BB;
+  }
