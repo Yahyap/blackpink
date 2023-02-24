@@ -14,7 +14,7 @@ body{
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header{
@@ -24,11 +24,11 @@ header{
 }
 nav{
     background-color: #080405;
-    width: 100%;
-    padding: 20px 0;
+    min-height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 nav .logo{
     letter-spacing: 3px;
@@ -50,7 +50,7 @@ ul li a{
     text-decoration: none;
     font-weight: bold;
     color: white;
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 
@@ -130,6 +130,24 @@ main{
     width: 80%;
     line-height: 20px;
     text-align: justify;
+}
+
+.member-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.member-wrapper .member-item {
+    max-width: 250px;
+    text-align: center;
+}
+
+.member-wrapper .member-item img{
+    width: 100%;
 }
 
 aside{
@@ -254,21 +272,24 @@ footer .copyright{
 
 /* mobile phone screen */
 @media screen and (max-width: 900px){
+    header nav .menu-toggle{
+        margin-right: 20px;
+        display: flex;
+    }
     nav{
         justify-content: space-between;
         align-items: center;
     }
 
     nav ul{
-        /* padding-top: 65px;   */
+        z-index: 1;
         position: absolute;
         flex-direction: column;
         list-style: none;
         right: 0;
-        top: 0;
+        top: 20px;
+        padding: 20px;
         background-color: pink;
-        height: 100vh;
-        z-index: -1;
         align-items: center;
         justify-content: space-evenly;
         transform: translateX(100%);
@@ -279,16 +300,20 @@ footer .copyright{
         transform: translateX(0);
     }
 
+    header .banner{
+        z-index: -2;
+    }
+
     nav .logo{
         margin-left: 20px;
     }
 
-    header nav .menu-toggle{
-        margin-right: 20px;
-        display: flex;
+    main{
+        flex-direction: column;
     }
 
-    header .banner{
-        z-index: -99999999;
+    main aside{
+        align-self: center;
     }
+
 }
