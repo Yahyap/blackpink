@@ -53,18 +53,20 @@ body{
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    background-color: #f1f3f6;
     min-height: 100vh;
-
 }
 
 header{
-    background-color: #080405;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 nav{
+    background-color: #080405;
+    height: 80px;
     left: 0;
     right: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +90,15 @@ ul li a{
     font-weight: bold;
     color: white;
     padding: 16px;
+}
+
+header .banner {
+    width: 100%;
+    background-image: url("../assets/img/banner-2.jpg");
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+
 }
 
 /* for responsive purpose */
@@ -122,12 +133,12 @@ ul li a{
 
 main{
     display: flex;
-    min-height: 100vh;
+    flex: 1;
     max-width: 1200px;
-    margin: auto;
     width: 100%;
     background-color: white;
     overflow: hidden;
+    margin: auto;
 }
 
 .content{
@@ -152,92 +163,20 @@ aside{
     flex-direction: column;
 }
 aside .img-zulfan{
-    max-width: 150px;
+    max-width: 250px;
 }
 
 aside .img-zulfan img{
     width: 100%;
 }
 
-/* container */
-.container{
-    width: 90%;
-    margin: auto;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-.container img{
-    /* make image in center */
-    width: 400px;
-    margin: auto;
-    display: flex;
-}
-h2{
-    font-weight: bold;
-    font-size: xx-large;
-    color: #363636;
-    /* display: block; */
-}
-
-footer{
-    width: 100%;
-    background-color:#080405;
-    color: pink;
-    text-align: center;
-    margin: auto;
-    height: 100%;
-    padding: 16px 0;
-    /* position: relative; */
-    /* bottom:0; */
-}
-
-footer ul li a{
-    color: pink;
-    text-decoration: none;
-}
 iframe{
     display: block-inline;
-}
-
-.container-split{
-    width: 90%;
-    display: flex;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    /* div on center of page */
-    align-items: center;
-    vertical-align: middle;
-    position: relative;
-    line-height: 1.6;
-    padding-bottom: 16px;
-}
-
-.middle-of-container{
-    margin-left: 20px;
-    text-align: justify;
-    /* align-self: center; */
-    /* width: 400px; */
-}
-footer span{
-    margin-top: 16px;
 }
 
 ul li a img{
     margin: auto;
 align-content: center;}
-
-.container table td{
-    vertical-align: top;
-    padding-right: 16px;
-    text-align: justify;
-}
 
 .container-pink{
     width: 100%;
@@ -276,7 +215,8 @@ button:hover{
     margin-top: 10px;
 }
 .middle-pink h2{
-    font-size: 70px;    
+    font-size: 70px;  
+    color:#363636 ;  
 }
 input[type=text], input[type=email]{
     padding-left: 5px;
@@ -298,40 +238,31 @@ input[type=text]:hover, input[type=email]:hover{
 figcaption{
     text-align: center;
 }
-h1{
-    font-size: 50px;
-    font-weight: bold;
-    color: #363636;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Card */
-.card-container{
-
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-gap: 1rem;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: inset 0 0 15px rgba(55, 84, 170, 0),
-    inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15),
-    -7px -7px 20px rgba(255, 255, 255, 1),
-    inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-}
-.card {
-
-  line-height: 1.7;
-  font-size: 1.25rem;
-  text-align: center;
-
-}
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-  .img-little img{
+.img-little img{
     width: 24px;
   }
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color:#080405;
+    color: pink;
+    text-align: center;
+    margin: auto;
+    padding: 16px 0;
+}
+
+footer .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+}
+footer .social-media .icon-wrapper{
+    margin: 0px 10px;
+}
+
+footer .copyright{
+    margin-top: 16px;
+}
