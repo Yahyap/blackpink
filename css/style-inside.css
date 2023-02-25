@@ -1,11 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 *{
     padding: 0;
     margin: 0;
 }
+html{scroll-behavior:smooth}
 
 h1, h2, h3, h4 {
     color: #363636
@@ -33,7 +30,6 @@ section{
     margin: 2rem 0;
 }
 
-/* CSS RESET */
 
 body{
     font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -58,7 +54,6 @@ nav{
 }
 nav .logo{
     letter-spacing: 3px;
-    /* display: none; */
 }
 .logo h4{
     font-weight: 800;
@@ -70,13 +65,13 @@ nav ul {
     padding: 14px;
     width: 40%;
     justify-content: space-around;
-    /* margin-top: 10px; */
+
 }
 ul li a{
     text-decoration: none;
     font-weight: bold;
     color: white;
-    /* padding: 16px; */
+
 }
 
 
@@ -135,6 +130,7 @@ header .banner {
 
 main{
     display: flex;
+    flex-direction: row;
     flex: 1;
     max-width: 1200px;
     width: 100%;
@@ -249,7 +245,6 @@ iframe{
 .container-pink table, .container-pink td{
     margin: auto;
     padding: 5px;
-    /* text-align: left; */
 }
 tbody{
     text-align: left;
@@ -319,7 +314,7 @@ footer{
     margin: 16px 0;
 }
 .social-media .icon-wrapper{
-    margin: 0px 10px;
+    margin: 0px 15px;
     max-width: 24px;
 }
 
@@ -327,15 +322,8 @@ footer .copyright{
     margin-top: 16px;
 }
 
-/* tablet screen */
-/* @media screen and (max-width: 768px) {
-    nav ul{
-        width: 50%;
-    }
-} */
-
 /* mobile phone screen */
-@media screen and (max-width: 900px){
+@media only screen and (max-width: 900px){
     header{
         position: relative;
     }
@@ -385,9 +373,6 @@ footer .copyright{
         flex-direction: column;
     }
 
-    /* main aside{
-        align-self: center;
-    } */
     .member-wrapper .member-item{
         max-width: 500px;
     }
